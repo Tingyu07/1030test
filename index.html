@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="醫療科技與全端開發個人履歷，介紹 ECG Lab 工作經驗、程式學習歷程與專案作品。">
+  <title>個人履歷｜醫療科技 × 全端開發</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{--primary:#205D96;--primary-dark:#294B6C;--navigation:#294B6C;--hero:#E0F0FF;--accent-blue:#72B7FF;--accent-green:#BAE8CA;--ink:#243341;--bg:#F0F2F5;--surface:#FFFFFF;--warm:#FFEBC9;--muted:#526777;--line:#D9E4ED;--mint:var(--accent-green)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:system-ui,-apple-system,"Microsoft JhengHei","Noto Sans TC",sans-serif;background:var(--bg);color:var(--ink);line-height:1.85}
+    .hero{background:linear-gradient(125deg,#E0F0FF 0%,#FFFFFF 65%,#E0F0FF 100%);padding:105px 0 90px;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;width:340px;height:340px;border:55px solid #72B7FF55;border-radius:50%;right:-110px;top:-100px;pointer-events:none}
+    .eyebrow{color:var(--primary);font-size:.85rem;font-weight:750;letter-spacing:.17em;text-transform:uppercase}.hero h1{font-weight:800;letter-spacing:.02em;font-size:clamp(2.2rem,5vw,4rem);line-height:1.25}.lead-text{font-size:1.08rem;color:#526777;max-width:670px}
+    .tag{display:inline-block;padding:.35rem .85rem;border-radius:30px;background:#E0F0FF;color:var(--primary-dark);font-size:.88rem;margin:.25rem .35rem .25rem 0}
+    .btn-med{background:var(--primary);border:2px solid var(--primary);color:white;border-radius:9px;padding:.65rem 1.25rem;font-weight:650}.btn-med:hover,.btn-med:focus{background:var(--primary-dark);border-color:var(--primary-dark);color:white}
+    .btn-outline-med{background:transparent;border:2px solid var(--primary);color:var(--primary-dark);border-radius:9px;padding:.65rem 1.25rem;font-weight:650}.btn-outline-med:hover,.btn-outline-med:focus{background:var(--primary);color:#fff}
+    section.content-section{padding:78px 0}.section-title{font-size:clamp(1.7rem,3vw,2.15rem);font-weight:800;margin-bottom:12px}.section-title:after{content:"";display:block;width:55px;height:4px;background:var(--primary);border-radius:4px;margin-top:14px}.section-intro{color:var(--muted);max-width:760px;margin-bottom:30px}
+    .card-soft{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;height:100%;box-shadow:0 9px 25px #294B6C12}.card-soft h3{font-size:1.2rem;font-weight:750}.card-soft p:last-child{margin-bottom:0}.card-soft ul{padding-left:1.25rem;margin-bottom:0}.card-soft li{margin-bottom:.5rem}.muted{color:var(--muted)}
+    .experience{border-left:4px solid var(--accent-green);padding-left:22px}.period{color:var(--primary);font-weight:700;font-size:.9rem}.number{font-size:2rem;font-weight:800;color:var(--primary)}
+    .project-label{font-size:.8rem;letter-spacing:.07em;color:var(--primary);font-weight:750}.project-card{display:flex;flex-direction:column}.project-card .project-action{margin-top:auto;padding-top:18px}.project-card .btn{width:100%}
+    .contact{background:#E0F0FF}.footer{background:#294B6C;color:#FFFFFF;padding:22px 0;font-size:.9rem}a{color:var(--primary-dark)}a:focus-visible{outline:3px solid #72B7FF;outline-offset:3px}
+    @media(max-width:767.98px){.hero{padding:72px 0 60px}section.content-section{padding:55px 0}.card-soft{padding:23px}}
+  </style>
+</head>
+<body>
+  <!-- Figma 色票已同步至 :root，可直接修改 CSS 變數 -->
+  <!-- 1. 個人簡介：請自行修改姓名、聯絡方式及自我介紹 -->
+  <header class="hero">
+    <div class="container position-relative" style="z-index:1">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-9">
+          <p class="eyebrow mb-3">Healthcare × Technology × Development</p>
+          <h1 class="mb-3">你好，我是<span style="color:var(--primary)">［你的姓名］</span><br>讓醫療專業與程式技術相互連結。</h1>
+          <p class="lead-text mb-4">具備動物心電圖（ECG）服務流程、品質管理及團隊協作經驗，目前持續學習前端、後端與資料庫開發。期望將醫療領域的實務觀察轉化為更清晰、可靠且易於使用的數位產品，朝全端工程師及醫療科技軟體開發方向發展。</p>
+          <div class="mb-4"><span class="tag">ECG Lab Operations</span><span class="tag">Healthcare Technology</span><span class="tag">Full-Stack Learning</span><span class="tag">Quality Assurance</span></div>
+          <a class="btn btn-med me-2 mb-2" href="#projects">查看我的作品</a>
+          <a class="btn btn-outline-med mb-2" href="mailto:yourname@example.com">聯絡我</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="content-section" id="about"><div class="container">
+      <h2 class="section-title">個人簡介 About Me</h2>
+      <p class="section-intro">跨領域背景，是我理解使用者需求與規劃系統流程的起點。</p>
+      <div class="row g-4">
+        <div class="col-lg-8"><div class="card-soft"><h3>從醫療服務流程走向軟體開發</h3><p>在 ECG Lab 相關工作中，我參與心電圖報告作業協調、品質檢核、標準作業流程（SOP）整理與新人訓練。這些經驗讓我習慣從資料正確性、操作效率與跨角色溝通等面向思考問題。</p><p>隨著接觸表單管理、自動化流程及資料追蹤需求，我開始系統性學習網頁與應用程式開發，希望不只提出改善建議，也能逐步具備將需求實作成工具的能力。</p></div></div>
+        <div class="col-lg-4"><div class="card-soft"><h3>我的工作特質</h3><ul><li>重視資料品質與流程一致性</li><li>能將複雜操作整理為清楚的 SOP</li><li>熟悉跨團隊溝通與問題追蹤</li><li>持續練習將需求拆解為可執行的功能</li></ul></div></div>
+      </div>
+    </div></section>
+    <section class="content-section" id="experience" style="background:#F0F2F5"><div class="container">
+      <h2 class="section-title">工作經驗 Experience</h2><p class="section-intro">以醫療數據作業、品質控管與流程改善為核心的實務經驗。</p>
+      <div class="card-soft experience"><p class="period">［任職起迄年月請自行填寫］</p><h3>ECG Lab｜心電圖服務營運與品質管理</h3><p class="muted">CardioBird／相關動物心電圖服務</p><ul><li><strong>品質管理：</strong>協助檢查 ECG 資料、報告內容及作業流程，追蹤異常情況並促進問題修正。</li><li><strong>流程優化：</strong>整理與維護 SOP、作業指引及回報機制，降低溝通落差。</li><li><strong>教育訓練：</strong>協助新人訓練、練習資料檢核及學習進度追蹤。</li><li><strong>跨部門協作：</strong>協調作業人員、醫師及相關團隊，處理時效與品質需求。</li></ul></div>
+    </div></section>
+    <section class="content-section" id="learning"><div class="container">
+      <h2 class="section-title">學習歷程 Learning Journey</h2><p class="section-intro">從基礎語法、響應式版型到資料庫操作，逐步建立前後端整合能力。以下為學習與實作中的技術，並非全部代表商業專案經驗。</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-3"><div class="card-soft"><p class="eyebrow">01 / Frontend</p><h3>網頁前端</h3><p>HTML、CSS、Bootstrap、JavaScript、jQuery；練習響應式網頁、版型切分及基本互動功能。</p></div></div>
+        <div class="col-md-6 col-xl-3"><div class="card-soft"><p class="eyebrow">02 / Backend</p><h3>後端與資料庫</h3><p>PHP、SQL、MySQL；學習表單資料傳遞、CRUD、資料庫連線及基本錯誤處理。</p></div></div>
+        <div class="col-md-6 col-xl-3"><div class="card-soft"><p class="eyebrow">03 / App</p><h3>跨平台應用</h3><p>Dart、Flutter；練習元件、狀態管理、動畫與圖片操作等基礎功能。</p></div></div>
+        <div class="col-md-6 col-xl-3"><div class="card-soft"><p class="eyebrow">04 / Workflow</p><h3>設計與版本管理</h3><p>Figma、Git、GitHub；練習介面原型、元件規劃、分支管理與版本控制。</p></div></div>
+      </div>
+    </div></section>
+    <section class="content-section" id="projects" style="background:#F0F2F5"><div class="container">
+      <h2 class="section-title">作品展示 Projects</h2><p class="section-intro">以下為練習或規劃中的專案。正式投遞履歷前，請依實際完成狀態修改文字，並替換按鈕連結。</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-4"><article class="card-soft project-card"><p class="project-label">LEARNING PROJECT / 規劃與開發中</p><h3>VetECG Learn</h3><p>以犬貓心電圖入門教材為核心的學習網站，規劃主題式教材、清楚的資訊架構與學習進度功能，探索醫療知識如何轉化為易讀的數位內容。</p><p class="muted small">規劃技術：HTML / CSS / JavaScript / PHP / MySQL</p><div class="project-action"><a class="btn btn-outline-med" href="https://example.com/vetecg-learn" target="_blank" rel="noopener noreferrer">查看作品（請替換網址）</a></div></article></div>
+        <div class="col-md-6 col-xl-4"><article class="card-soft project-card"><p class="project-label">WEB PRACTICE / 練習作品</p><h3>Bootstrap 響應式網頁</h3><p>透過 Bootstrap Grid 與 CSS 媒體查詢練習多裝置排版，觀察不同螢幕尺寸下的欄位、圖片與內容呈現方式。</p><p class="muted small">技術：HTML / CSS / Bootstrap</p><div class="project-action"><a class="btn btn-outline-med" href="1030AI01.html" target="_blank" rel="noopener noreferrer">查看作品</a></div></article></div>
+        <div class="col-md-6 col-xl-4"><article class="card-soft project-card"><p class="project-label">BACKEND PRACTICE / 練習作品</p><h3>PHP 會員資料管理練習</h3><p>以表單與資料庫操作為練習主題，理解資料送出、後端接收、SQL 更新及交易處理的基本流程。</p><p class="muted small">技術：PHP / MySQL / HTML / CSS</p><div class="project-action"><a class="btn btn-outline-med" href="https://example.com/php-demo" target="_blank" rel="noopener noreferrer">查看作品（請替換網址）</a></div></article></div>
+      </div>
+      <p class="small muted mt-4 mb-0">提示：若作品尚未公開，請先將按鈕連結改為 GitHub Repository，或暫時移除該作品按鈕。不要將測試帳號、密碼或真實醫療資料公開。</p>
+    </div></section>
+    <section class="content-section contact" id="contact"><div class="container text-center"><p class="eyebrow">Let's Connect</p><h2 class="section-title d-inline-block">聯絡資訊 Contact</h2><p class="mx-auto" style="max-width:650px">期待參與全端開發、醫療資訊系統及生技相關數位產品的開發工作，持續結合領域知識、工程技能與團隊合作，創造具實用價值的解決方案。</p><div class="d-flex flex-wrap justify-content-center gap-3 mt-4"><a class="btn btn-med" href="mailto:yourname@example.com">Email 聯絡</a><a class="btn btn-outline-med" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">GitHub 作品集</a></div></div></section>
+  </main>
+  <footer class="footer text-center"><div class="container">© 2026 ［你的姓名］ · Healthcare × Full-Stack Development</div></footer>
+</body>
+</html>
