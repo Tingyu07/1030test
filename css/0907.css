@@ -1,0 +1,129 @@
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        body{
+            background-color:var(--bg02);
+        
+        }
+
+        .wrapper{
+            width:1024px;
+            margin-top:50px;
+            margin-bottom:0;
+            margin-right:auto;
+            margin-left:auto;
+        }
+        .logo{
+            width:1024px;
+            height:100px;
+            background-color:var(--bg03);
+            background-image: url(../ECG.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
+        nav{
+            background-color:chocolate;
+            text-align:center;
+            padding-top:10px;
+            padding-bottom:10px;
+            margin-top:5px;
+            margin-bottom:5px;
+        }
+        nav ul{
+            display:inline-block;;
+        }
+        nav ul li{
+            float:left;
+            list-style-type:none;
+        }
+        nav ul li a{
+            text-decoration:none;
+            color:var(--text01);
+            padding-top:8px;
+            padding-bottom:8px;
+            padding-left:20px;
+            padding-right:20px;
+            font-size:18px;
+            border-radius:10px;
+            background-color:rgb(236, 155, 117);
+            margin-right:10px;
+        }
+        nav ul li a:hover{
+            background-color:sienna;
+        }
+        .content{
+            background-color:rgb(218, 134, 74);
+            padding-top:20px;
+            padding-bottom:20px;
+            padding-left:20px;
+            padding-right:20px;
+        }
+        
+        .content h1{
+            text-align:center;
+            margin-bottom:15px;
+            color:var(--text02)
+        }
+        .content p{            
+            margin-bottom:15px;
+        }
+        .content a{
+            display:block;
+            color:rgb(173, 162, 162);
+            background-color:rgb(235, 177, 158);
+            text-decoration:none;
+            text-align:center;
+            border-radius:10px;
+            width:100px;
+            height:30px;
+            margin-top:10px;
+            margin-left:auto;
+            margin-right:auto;
+            margin-bottom:10px;
+            padding-top: 8px;
+        }
+
+        .content a:hover{
+            background-color:sienna;
+        }
+
+        .footer{
+            background-color:rgb(236, 209, 173);
+            margin-top:5px;
+            text-align:center;
+        }
+        
+
+        /*RWD指令*/
+    @media screen and (max-width:1024px) {
+        .wrapper{width:95% }
+        .banner .logo{
+            width: 100%;
+            background-color: rgb(218, 134, 74);
+        }
+         } 
+    @media screen and (max-width:768px){
+        .wrapper{width:95% }
+         .logo{
+            width: 100%;
+            background-color: rgb(241, 178, 133);
+            background-image: url(../image/heart.avif);
+            background-position: center center;
+            background-size: cover;
+        }
+        nav ul{
+            display:block;
+        }
+        nav ul li{
+            float:none;
+            margin-bottom:5px;
+        }
+        nav ul li a{
+            display:block;
+            background-color:rgb(127, 198, 202);
+            margin-right:5px;
+            margin-left:5px;
+        }
+    }

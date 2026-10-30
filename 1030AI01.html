@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starry Doll｜星夜娃娃屋</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/mygo.css">
+
+    <style>
+        /* 星空背景 */
+        body {
+            background: linear-gradient(145deg, #090e20, #192444, #30234d);
+            background-attachment: fixed;
+            color: #f4efff;
+            font-family: "Microsoft JhengHei", sans-serif;
+        }
+
+        /* 星空點綴 */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                radial-gradient(2px 2px at 15% 20%, #ffffff 90%, transparent),
+                radial-gradient(2px 2px at 75% 35%, #e4ccff 90%, transparent),
+                radial-gradient(1px 1px at 45% 70%, #ffffff 90%, transparent),
+                radial-gradient(2px 2px at 85% 85%, #ffe5a9 90%, transparent);
+            background-size: 230px 230px;
+            opacity: 0.5;
+        }
+
+        .container {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        /* 保留原本 box01 類別 */
+        .box01 {
+            min-height: 160px;
+            text-align: center;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #202a4b;
+            border: 1px solid #514775;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .box01:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(174, 143, 255, 0.3);
+        }
+
+        /* Header */
+        .header-box {
+            min-height: 160px;
+            padding: 30px 15px;
+            background: linear-gradient(120deg, #28345e, #644a85);
+            border: 1px solid #b7a1e7;
+        }
+
+        .header-box h1 {
+            font-size: 38px;
+            font-weight: 900;
+            color: #f7e2a5;
+            letter-spacing: 3px;
+        }
+
+        .header-box p {
+            color: #e0d3ff;
+            margin-bottom: 0;
+        }
+
+        /* 分類區 */
+        .category-box {
+            min-height: 160px;
+            padding: 35px 8px;
+            background: linear-gradient(145deg, #29365c, #493b70);
+        }
+
+        .category-icon {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .category-box h3 {
+            font-size: 17px;
+            font-weight: bold;
+            color: #f8e7b5;
+        }
+
+        /* 商品卡片 */
+        .product-box {
+            padding: 12px;
+            background: #202a49;
+            height: 100%;
+        }
+
+        .product-box img {
+            width: 100%;
+            height: 160px;
+            object-fit: contain;
+            border-radius: 10px;
+            background: #303858;
+            padding: 8px;
+        }
+
+        .product-box h3 {
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 12px;
+            color: #f5efff;
+        }
+
+        .product-box p {
+            font-size: 13px;
+            color: #c7bfdf;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f6d58d;
+            margin-bottom: 10px;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            background: #9478ca;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: #c2a3f2;
+            color: #15152b;
+        }
+
+        /* 區域標題 */
+        .section-title {
+            margin-top: 30px;
+            margin-bottom: 5px;
+            color: #f5dca0;
+            font-size: 23px;
+            font-weight: bold;
+            border-left: 4px solid #bca1f1;
+            padding-left: 12px;
+        }
+
+        /* Footer */
+        .footer-box {
+            min-height: 160px;
+            padding: 35px 15px;
+            background: #151d37;
+            color: #c9c1df;
+        }
+
+        .footer-box h3 {
+            color: #f6d58d;
+            font-size: 22px;
+        }
+
+        /* 小螢幕微調 */
+        @media (max-width: 576px) {
+            .header-box h1 {
+                font-size: 27px;
+            }
+
+            .product-box img {
+                height: 190px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Header：保留原本 RWD 設定 -->
+        <div class="row">
+            <div class="col-12 mt-3 d-md-none d-lg-block">
+                <div class="box01 header-box">
+                    <h1>✦ Starry Doll ✦</h1>
+                    <p>星夜娃娃屋｜收藏屬於你的夢幻小宇宙</p>
+                    <p>讓每一顆星星，都陪伴一個可愛的靈魂 ♡</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第一排：六個分類 -->
+        <h2 class="section-title">✦ 星夜娃娃分類</h2>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="box01 category-box">
+                    <div class="category-icon">🌙</div>
+                    <h3>月光系列</h3>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="box01 category-box">
+                    <div class="category-icon">⭐</div>
+                    <h3>星星系列</h3>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="box01 category-box">
+                    <div class="category-icon">🐰</div>
+                    <h3>夢幻兔兔</h3>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="box01 category-box">
+                    <div class="category-icon">🐱</div>
+                    <h3>療癒貓咪</h3>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="box01 category-box">
+                    <div class="category-icon">🎀</div>
+                    <h3>限定收藏</h3>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xxl-2 mt-3">
+                <div class="box01 category-box">
+                    <div class="category-icon">🎁</div>
+                    <h3>送禮推薦</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二排：精選娃娃 -->
+        <h2 class="section-title">✦ 本週星光精選</h2>
+        <div class="row">
+            <div class="col-sm-6 col-lg-3 col-xxl-2 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/01.png" alt="月光娃娃">
+                    <h3>月光小夥伴</h3>
+                    <p>柔軟療癒的星夜陪伴</p>
+                    <div class="price">NT$ 390</div>
+                    <a href="#shop" class="buy-btn">查看商品</a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 col-xxl-2 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/02.png" alt="星星娃娃">
+                    <h3>閃耀星星寶</h3>
+                    <p>收藏最閃亮的心願</p>
+                    <div class="price">NT$ 420</div>
+                    <a href="#shop" class="buy-btn">查看商品</a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 col-xxl-2 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/03.png" alt="夢境娃娃">
+                    <h3>甜夢小精靈</h3>
+                    <p>陪你走進奇幻夢境</p>
+                    <div class="price">NT$ 450</div>
+                    <a href="#shop" class="buy-btn">查看商品</a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 col-xxl-2 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/04.png" alt="銀河娃娃">
+                    <h3>銀河守護者</h3>
+                    <p>來自宇宙的溫柔守護</p>
+                    <div class="price">NT$ 490</div>
+                    <a href="#shop" class="buy-btn">查看商品</a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 col-xxl-2 mt-3 d-none d-xxl-block">
+                <div class="box01 product-box">
+                    <img src="./image/01.png" alt="星夜限定娃娃">
+                    <h3>星夜限定款</h3>
+                    <p>值得收藏的可愛驚喜</p>
+                    <div class="price">NT$ 520</div>
+                    <a href="#shop" class="buy-btn">查看商品</a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 col-xxl-2 mt-3 d-none d-xxl-block">
+                <div class="box01 product-box">
+                    <img src="./image/02.png" alt="星光禮物娃娃">
+                    <h3>星光禮物盒</h3>
+                    <p>送給最重要的那個人</p>
+                    <div class="price">NT$ 590</div>
+                    <a href="#shop" class="buy-btn">查看商品</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第三排：八個商品 -->
+        <h2 class="section-title" id="shop">✦ 探索所有娃娃</h2>
+        <div class="row">
+            <div class="col-md-6 col-xl-3 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/01.png" alt="月光寶寶">
+                    <h3>月光寶寶</h3>
+                    <p>柔軟的日常陪伴</p>
+                    <div class="price">NT$ 390</div>
+                    <a href="#shop" class="buy-btn">加入收藏 ♡</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/02.png" alt="星願娃娃">
+                    <h3>星願娃娃</h3>
+                    <p>讓小小願望發光</p>
+                    <div class="price">NT$ 420</div>
+                    <a href="#shop" class="buy-btn">加入收藏 ♡</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/03.png" alt="夢幻小寶">
+                    <h3>夢幻小寶</h3>
+                    <p>甜甜的夢境朋友</p>
+                    <div class="price">NT$ 450</div>
+                    <a href="#shop" class="buy-btn">加入收藏 ♡</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/04.png" alt="銀河小寶">
+                    <h3>銀河小寶</h3>
+                    <p>宇宙裡的溫暖星光</p>
+                    <div class="price">NT$ 490</div>
+                    <a href="#shop" class="buy-btn">加入收藏 ♡</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/01.png" alt="午夜星光">
+                    <h3>午夜星光</h3>
+                    <p>夜空限定的可愛收藏</p>
+                    <div class="price">NT$ 520</div>
+                    <a href="#shop" class="buy-btn">加入收藏 ♡</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/02.png" alt="流星小夥伴">
+                    <h3>流星小夥伴</h3>
+                    <p>陪你追逐每個願望</p>
+                    <div class="price">NT$ 460</div>
+                    <a href="#shop" class="buy-btn">加入收藏 ♡</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/03.png" alt="紫夜精靈">
+                    <h3>紫夜精靈</h3>
+                    <p>神祕又溫柔的陪伴</p>
+                    <div class="price">NT$ 480</div>
+                    <a href="#shop" class="buy-btn">加入收藏 ♡</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mt-3">
+                <div class="box01 product-box">
+                    <img src="./image/04.png" alt="星空守護娃娃">
+                    <h3>星空守護娃娃</h3>
+                    <p>每個夜晚都有星星相伴</p>
+                    <div class="price">NT$ 550</div>
+                    <a href="#shop" class="buy-btn">加入收藏 ♡</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer：保留原本 RWD 設定 -->
+        <div class="row">
+            <div class="col-12 mt-3 d-none d-md-block">
+                <div class="box01 footer-box">
+                    <h3>✦ Starry Doll ✦</h3>
+                    <p>讓可愛的小娃娃，點亮你的每一天。</p>
+                    <small>© 2026 Starry Doll｜星夜娃娃屋</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

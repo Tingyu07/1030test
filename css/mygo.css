@@ -1,0 +1,153 @@
+*{
+        margin:0;
+        padding:0;
+        }
+
+@import url('https://fonts.googleapis.com/css2?family=Huninn&display=swap');
+
+body{
+    font-family: "Huninn", sans-serif;
+}
+
+:root {
+  /* ===== 基礎背景 ===== */
+  --bg01: #F8F7F2;          
+  --bg02: #91ecdd;         
+  --bg03: #6399e9;          
+
+  /* ===== 文字與邊框 ===== */
+  --text01: #405258;        /* 柔和深灰藍 */
+  --text02: #61716F;   /* 灰綠 */
+  --border01: #DCE6E3;      /* 淺灰綠邊框 */
+
+  /* ===== 強調色 ===== */
+  --accent-blue: #8FB8C5;
+  --accent-green: #9FBEA5;
+  --accent-teal: #91BBB5;
+
+  /* ========================================
+     Base / 基礎
+     ======================================== */
+
+  --bg-main: #F3F8F7;          /* 淡藍綠白 */
+  --bg-white: #FFFFFF;         /* 白 */
+  --bg-soft: #EAF3F2;          /* 柔和藍綠 */
+  --bg-muted: #E4EFEE;         /* 淺灰藍綠 */
+
+
+  /* ========================================
+     Blue / 藍色系
+     ======================================== */
+
+  --blue-50: #EEF7F8;
+  --blue-100: #E2F0F2;
+  --blue-200: #CFE5E8;
+  --blue-300: #B5D5DA;
+  --blue-500: #6FA8B2;
+  --blue-700: #397783;
+
+
+  /* ========================================
+     Teal / 藍綠色系
+     ======================================== */
+
+  --teal-50: #EEF8F6;
+  --teal-100: #E0F1EE;
+  --teal-200: #C9E5E1;
+  --teal-300: #A9D2CC;
+  --teal-500: #69A99F;
+  --teal-700: #397B73;
+
+
+  /* ========================================
+     Green / 綠色系
+     ======================================== */
+
+  --green-50: #F0F7F2;
+  --green-100: #E4F1E7;
+  --green-200: #D0E6D5;
+  --green-300: #B5D4BC;
+  --green-500: #79A985;
+  --green-700: #4B7655;
+
+
+  /* ========================================
+     Text / 文字
+     ======================================== */
+
+  --text-main: #284B4D;        /* 主文字：深藍綠 */
+  --text-primary: #315A5C;     /* 主要文字 */
+  --text-secondary: #527071;   /* 次要文字 */
+  --text-muted: #708889;       /* 輔助文字 */
+
+  /* 不建議使用純黑 #000000 */
+
+
+  /* ========================================
+     Border / 邊框
+     ======================================== */
+
+  --border-light: #D8E8E6;
+  --border: #C3DBD8;
+  --border-strong: #A6C7C3;
+
+
+  /* ========================================
+     Accent / 強調色
+     ======================================== */
+
+  --accent: #4F9189;
+  --accent-hover: #397B73;
+  --accent-light: #DDEEEB;
+
+
+  /* ========================================
+     Status / 狀態色
+     ======================================== */
+
+  --success: #4F8561;
+  --success-bg: #E6F1E8;
+
+  --info: #477F8A;
+  --info-bg: #E3F0F2;
+
+  --warning: #927C4D;
+  --warning-bg: #F5F0E2;
+
+  --danger: #9A5D62;
+  --danger-bg: #F5E8E9;
+
+
+  /* ========================================
+     Shadow / 陰影
+     ======================================== */
+
+  --shadow-sm:
+    0 1px 3px rgba(45, 86, 84, 0.08);
+
+  --shadow:
+    0 4px 12px rgba(45, 86, 84, 0.10);
+
+  --shadow-lg:
+    0 8px 24px rgba(45, 86, 84, 0.12);
+.fw-200{
+    font-weight: 200;
+}
+.fw-400{
+    font-weight:400;
+}
+.fw-900{
+    font-weight: 900;
+}
+
+.content .box1{
+    width:49%;
+    height:160px;
+    background-color:var(--bg01);
+    background-image:url(../image/heart.avif) ;
+    background-position: center center;
+    background-size: cover;
+    float:left;
+}
+
+}
