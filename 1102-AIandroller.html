@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="台灣 VTuber 極深空計畫四位成員的 2022 年初配信時間軸。" name="description"/>
+<title>極深空計畫｜星際初配信時間軸</title>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/mygo.css" rel="stylesheet"/>
+<style>
+    :root { --space:#070d23; --starlight:#f2f5ff; --muted:#c5d0e9; --gold:#f5d68c; }
+    * { box-sizing:border-box; }
+    body {
+      min-height:100vh; color:var(--starlight); overflow-x:hidden;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background: radial-gradient(ellipse at 12% 12%,rgba(84,77,166,.34),transparent 38%),
+                  radial-gradient(ellipse at 88% 62%,rgba(35,105,156,.28),transparent 40%),
+                  linear-gradient(145deg,#05091b 0%,#101936 50%,#060a1b 100%);
+    }
+    body::before {
+      content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.65;
+      background-image: radial-gradient(1px 1px at 15px 24px,#fff 98%,transparent),
+        radial-gradient(2px 2px at 115px 92px,#d8e7ff 98%,transparent),
+        radial-gradient(1px 1px at 205px 155px,#fff 98%,transparent),
+        radial-gradient(1px 1px at 85px 175px,#a8b8ff 98%,transparent);
+      background-size:260px 210px;
+    }
+    .page-shell { position:relative; z-index:1; }
+    .space-title {
+      margin:24px 0 14px; padding:30px 18px; text-align:center; border:1px solid rgba(197,213,255,.25);
+      border-radius:22px; background:linear-gradient(120deg,rgba(40,54,110,.76),rgba(70,44,113,.53));
+      box-shadow:0 12px 38px rgba(0,0,0,.24);
+    }
+    .space-title h1 { margin:0; font-weight:900; letter-spacing:.09em; font-size:clamp(2rem,5vw,3.6rem); color:#fff; text-shadow:0 0 24px rgba(155,181,255,.5); }
+    .space-title .eyebrow { font-size:.85rem; letter-spacing:.28em; color:var(--gold); margin-bottom:9px; }
+    .space-title p { color:var(--muted); margin:12px auto 0; max-width:680px; }
+    .timeline-section { position:relative; padding:24px 0 32px; }
+    .timeline-section::before {
+      position:absolute; content:""; top:0; bottom:0; left:50%; transform:translateX(-50%);
+      width:8px; border-radius:20px; background:linear-gradient(to bottom,#f8faff,#f3a5d5,#b79cff,#ff6478);
+      box-shadow:0 0 16px rgba(145,173,255,.55);
+    }
+    .timeline-section-pointer { position:relative; margin-bottom:38px; --accent:#f5d68c; }
+    .timeline-section-pointer::before {
+      position:absolute; content:""; width:30px; height:30px; background:var(--accent);
+      border:5px solid #101735; left:50%; transform:translateX(-50%); border-radius:50%; top:24px;
+      box-shadow:0 0 0 3px rgba(255,255,255,.22),0 0 22px var(--accent); z-index:3;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .timeline-section-pointer:hover::before { transform:translateX(-50%) scale(1.2); box-shadow:0 0 0 4px rgba(255,255,255,.25),0 0 30px var(--accent); }
+    .star-one { --accent:#f8faff; } .star-two { --accent:#f3a5d5; }
+    .star-three { --accent:#b79cff; } .star-four { --accent:#ff6478; }
+    .img-box { height:280px; background-position:center center; background-size:cover; border-radius:18px; border:1px solid rgba(218,228,255,.38); box-shadow:0 12px 30px rgba(0,0,0,.35); transition:transform .25s ease,box-shadow .25s ease; }
+    .img-box:hover { transform:translateY(-4px); box-shadow:0 18px 38px rgba(0,0,0,.45),0 0 20px rgba(163,186,255,.2); }
+    .text-box { height:100%; padding:24px 25px; border:1px solid rgba(211,220,255,.25); border-radius:18px; background:rgba(17,27,60,.78); box-shadow:0 12px 30px rgba(0,0,0,.2); backdrop-filter:blur(9px); }
+    .text-box h2 { font-size:clamp(1.3rem,2.4vw,1.8rem); font-weight:900; color:var(--accent); text-align:center; margin:8px 0 15px; }
+    .text-box p { color:#e0e8f8; font-size:1rem; line-height:1.95; margin-bottom:12px; }
+    .text-box p:last-child { margin-bottom:0; }
+    .date-chip { display:inline-block; font-size:.82rem; font-weight:700; letter-spacing:.1em; padding:6px 12px; border-radius:99px; color:#10152e; background:var(--accent); }
+    .role-label { text-align:center; font-size:.78rem; letter-spacing:.12em; color:#c9d5ed; margin-bottom:12px; }
+    .timeline-section-pointer > .col-md-6 { padding-top:10px; padding-bottom:10px; }
+    .site-footer { text-align:center; color:#aebcdb; padding:4px 0 35px; font-size:.85rem; }
+    @media screen and (max-width:767.98px) {
+      .timeline-section { margin-left:14px; }
+      .timeline-section::before { left:-10px; }
+      .timeline-section-pointer::before { left:-10px; }
+      .timeline-section-pointer { margin-bottom:22px; }
+      .timeline-section-pointer > .col-md-6 { padding-left:20px; padding-right:12px; }
+      .text-box { padding:20px; }
+      .img-box { height:280px; }
+    }
+    @media (prefers-reduced-motion:reduce) { .img-box,.timeline-section-pointer::before { transition:none; } }
+  
+
+    /* 圖片卷軸：沿用原有 roller 命名與四個方向 */
+    .img-box.roller {
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+      height:320px;
+      cursor:default;
+    }
+    .img-box.roller::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      border-radius:inherit;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.20);
+      z-index:3;
+    }
+    .roller .roller-box,
+    .roller .roller-box2,
+    .roller .roller-box-t,
+    .roller .roller-box-b {
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      z-index:2;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:28px;
+      background:linear-gradient(145deg,rgba(5,10,29,.93),rgba(23,31,66,.83));
+      border:1px solid color-mix(in srgb,var(--accent) 65%,transparent);
+      backdrop-filter:blur(6px);
+      -webkit-backdrop-filter:blur(6px);
+      transition:transform .7s cubic-bezier(.22,1,.36,1),opacity .7s ease;
+      opacity:.96;
+    }
+    .roller .roller-box { transform:translateX(101%); }
+    .roller .roller-box2 { transform:translateX(-101%); }
+    .roller .roller-box-t { transform:translateY(-101%); }
+    .roller .roller-box-b { transform:translateY(101%); }
+    .roller:hover .roller-box,
+    .roller:hover .roller-box2,
+    .roller:hover .roller-box-t,
+    .roller:hover .roller-box-b,
+    .roller:focus .roller-box,
+    .roller:focus .roller-box2,
+    .roller:focus .roller-box-t,
+    .roller:focus .roller-box-b { transform:translate(0,0);opacity:1; }
+    .roller:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+    .roller-hint {
+      position:absolute;
+      bottom:12px;
+      right:12px;
+      z-index:1;
+      font-size:.78rem;
+      letter-spacing:.08em;
+      color:#fff;
+      background:rgba(5,10,29,.72);
+      border:1px solid rgba(255,255,255,.36);
+      border-radius:100px;
+      padding:6px 12px;
+      box-shadow:0 4px 15px rgba(0,0,0,.25);
+    }
+    .roller-title { color:var(--accent);font-size:clamp(1.45rem,2.5vw,1.9rem);font-weight:900;margin:0 0 8px;text-shadow:0 0 16px var(--accent); }
+    .roller-tag { color:#f3f6ff;font-size:.8rem;letter-spacing:.12em;margin-bottom:14px; }
+    .roller-desc { color:#f1f5ff;line-height:1.85;font-size:.98rem;max-width:360px;margin:0; }
+    .roller-line { width:58px;height:2px;border-radius:4px;background:var(--accent);box-shadow:0 0 14px var(--accent);margin:0 0 14px; }
+    @media (hover:none) {
+      /* 觸控裝置沒有 hover：顯示簡短提示，點擊／聚焦可開啟卷軸 */
+      .roller .roller-box,.roller .roller-box2,.roller .roller-box-t,.roller .roller-box-b { transition-duration:.45s; }
+      .roller-hint { font-size:.75rem; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      .roller .roller-box,.roller .roller-box2,.roller .roller-box-t,.roller .roller-box-b { transition:none; }
+    }
+
+    @media screen and (max-width:767.98px) { .img-box.roller { height:320px; } }
+</style>
+</head>
+<body>
+<div class="container page-shell">
+<header class="space-title">
+<div class="eyebrow">XTREME DEEP FIELD PROJECT</div>
+<h1>極深空計畫・星際初配信</h1>
+<p>四顆來自宇宙的星光，於 2022 年陸續與地球連線。沿著時間軸，一起回顧她們首次向觀眾發出訊號的日子。</p>
+</header>
+<main aria-label="極深空計畫初配信時間軸" class="timeline-section">
+<div class="row timeline-section-pointer star-one">
+<div class="col-md-6">
+<div aria-label="厄倫蒂兒圖片；點擊或使用 Tab 聚焦可閱讀特色介紹" class="img-box roller" role="img" style="background-image:url(/web/image/01.png);background-position:center center;background-size:cover;" tabindex="0"><span aria-hidden="true" class="roller-hint">探索星際檔案 ✦</span><div class="roller-box"><h3 class="roller-title">厄倫蒂兒</h3><div class="roller-tag">EARENDEL · WHITE STAR</div><div aria-hidden="true" class="roller-line"></div><p class="roller-desc">以遙遠恆星為靈感，歌聲溫柔而明亮。從第一道星光開始，邀請你聽見跨越宇宙的旋律。</p></div></div>
+</div>
+<div class="col-md-6">
+<article class="text-box">
+<div class="text-center"><span class="date-chip">2022.08.29 · FIRST SIGNAL</span></div>
+<h2>第一位出道｜厄倫蒂兒</h2>
+<div class="role-label">EARENDEL · 遙遠恆星</div>
+<p>來自遙遠宇宙的厄倫蒂兒，以恆星 WHL0137-LS 為角色原型。受到地球音樂吸引的她，帶著溫柔的歌聲踏上這趟跨越星際的旅程。</p>
+<p>2022 年 8 月 29 日，她率先展開初配信，為極深空計畫點亮第一道星光。從歌唱到與觀眾交流，她將遙遠的宇宙化作能夠聽見的陪伴。</p>
+</article>
+</div>
+</div>
+<div class="row timeline-section-pointer star-two">
+<div class="col-md-6 order-md-2">
+<div aria-label="涅默圖片；點擊或使用 Tab 聚焦可閱讀特色介紹" class="img-box roller" role="img" style="background-image:url(/web/image/02.png);background-position:center center;background-size:cover;" tabindex="0"><span aria-hidden="true" class="roller-hint">探索星際檔案 ✦</span><div class="roller-box2"><h3 class="roller-title">涅默</h3><div class="roller-tag">NEMESIS · PINK STAR</div><div aria-hidden="true" class="roller-line"></div><p class="roller-desc">帶著日之伴星的神祕色彩，喜愛唱歌、遊戲與貓咪。活潑自在的互動，是她獨特的魅力。</p></div></div>
+</div>
+<div class="col-md-6 order-md-1">
+<article class="text-box">
+<div class="text-center"><span class="date-chip">2022.09.26 · SECOND SIGNAL</span></div>
+<h2>第二位出道｜涅默</h2>
+<div class="role-label">NEMESIS · 日之伴星</div>
+<p>以傳說中的太陽伴星「涅墨西斯」為靈感，涅默接收到來自地球的訊號，決定走進人們的視野。她喜愛唱歌、遊戲與貓咪，展現充滿個性的星際魅力。</p>
+<p>2022 年 9 月 26 日，涅默正式展開初配信，成為第二位與地球連線的成員。她以音樂、遊戲實況和自在的互動，為這片星空增添不同的節奏。</p>
+</article>
+</div>
+</div>
+<div class="row timeline-section-pointer star-three">
+<div class="col-md-6">
+<div aria-label="埃穆亞圖片；點擊或使用 Tab 聚焦可閱讀特色介紹" class="img-box bg-img roller" role="img" style="background-image:url(/web/image/03.png);" tabindex="0"><span aria-hidden="true" class="roller-hint">探索星際檔案 ✦</span><div class="roller-box-t"><h3 class="roller-title">埃穆亞</h3><div class="roller-tag">OUMUA · PURPLE STAR</div><div aria-hidden="true" class="roller-line"></div><p class="roller-desc">來自遠方的星際信使，懷抱探索的好奇心與音樂熱情。每次歌唱，都像一封來自宇宙的訊息。</p></div></div>
+</div>
+<div class="col-md-6">
+<article class="text-box">
+<div class="text-center"><span class="date-chip">2022.10.31 · THIRD SIGNAL</span></div>
+<h2>第三位出道｜埃穆亞</h2>
+<div class="role-label">OUMUA · 星際信使</div>
+<p>埃穆亞是一位來自遠方的神祕星際信使，以斥候星為角色設定。她帶著探索宇宙的好奇心與對音樂的熱愛，將自己的訊息傳遞到地球。</p>
+<p>2022 年 10 月 31 日，她以初配信正式登場，彷彿寄出一封跨越光年的宇宙來信。獨特的嗓音與音樂表現，讓第三道星光在極深空計畫的夜空中亮起。</p>
+</article>
+</div>
+</div>
+<div class="row flex-row-reverse timeline-section-pointer star-four">
+<div class="col-md-6">
+<div aria-label="熙歌圖片；點擊或使用 Tab 聚焦可閱讀特色介紹" class="img-box bg-img roller" role="img" style="background-image:url(/web/image/04.png);" tabindex="0"><span aria-hidden="true" class="roller-hint">探索星際檔案 ✦</span><div class="roller-box-b"><h3 class="roller-title">熙歌</h3><div class="roller-tag">CYGNUS · RED STAR</div><div aria-hidden="true" class="roller-line"></div><p class="roller-desc">以天鵝座 X-1 黑洞為靈感，擅長用音樂、幽默與迷因製造驚喜，展現鮮明又親切的個性。</p></div></div>
+</div>
+<div class="col-md-6">
+<article class="text-box">
+<div class="text-center"><span class="date-chip">2022.11.28 · FOURTH SIGNAL</span></div>
+<h2>第四位出道｜熙歌</h2>
+<div class="role-label">CYGNUS · 天鵝座 X-1 黑洞</div>
+<p>以天鵝座 X-1 黑洞為角色原型的熙歌，擁有與眾不同的幽默感與創作能量。她喜歡彈琴、唱歌、遊戲與迷因，也以自然的台語特色展現鮮明個性。</p>
+<p>2022 年 11 月 28 日，熙歌完成初配信，四位成員終於全數登場。從最遙遠的恆星到神祕黑洞，極深空計畫的四道星光就此在同一片宇宙中相遇。</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="site-footer">2022 DEBUT TIMELINE · 極深空計畫粉絲練習作品 · 非官方網站</footer>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
